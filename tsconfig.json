@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-      "alwaysStrict": true,
       "emitDecoratorMetadata": true,
       "esModuleInterop": true,
       "experimentalDecorators": true,
@@ -13,8 +12,7 @@
       "outDir": "./lib",
       "pretty": false,
       "removeComments": true,
-      "sourceMap": true,
       "strict": true,
-      "target": "es2020"
+      "target": "ES2019"
   }
 }
