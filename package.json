@@ -2,7 +2,11 @@
   "name": "klara",
   "description": "Manage your klasa bot with ease!",
   "version": "0.0.0",
-  "author": "Charalampos Fanoulis @cfanoulis",
+  "author": "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
+  "maintainers": [
+    "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
+    "Nejc Drobnič (https://github.com/QuantumlyTangled)",
+  ],
   "bin": {
     "kl": "./bin/run"
   },
