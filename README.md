@@ -1,13 +1,13 @@
-klara
+kleo
 =====
 
 Manage your klasa bot with ease!
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/klara.svg)](https://npmjs.org/package/klara)
-[![Codecov](https://codecov.io/gh/cfanoulis/klara/branch/master/graph/badge.svg)](https://codecov.io/gh/cfanoulis/klara)
-[![Downloads/week](https://img.shields.io/npm/dw/klara.svg)](https://npmjs.org/package/klara)
-[![License](https://img.shields.io/npm/l/klara.svg)](https://github.com/cfanoulis/klara/blob/master/package.json)
+[![oclif](https://img.shields.io/static/v1?label=built%20using&message=oclif&color=green&style=flat-square)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/kleo.svg)](https://npmjs.org/package/kleo)
+[![Codecov](https://codecov.io/gh/cfanoulis/kleo/branch/master/graph/badge.svg)](https://codecov.io/gh/cfanoulis/kleo)
+[![Downloads/week](https://img.shields.io/npm/dw/kleo.svg)](https://npmjs.org/package/kleo)
+[![License](https://img.shields.io/npm/l/kleo.svg)](https://github.com/cfanoulis/kleo/blob/master/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -16,11 +16,11 @@ Manage your klasa bot with ease!
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g klara
+$ npm install -g kleo
 $ kl COMMAND
 running command...
 $ kl (-v|--version|version)
-klara/0.0.0 linux-x64 node-v14.3.0
+kleo/0.0.1 linux-x64 node-v14.3.0
 $ kl --help [COMMAND]
 USAGE
   $ kl COMMAND
@@ -29,28 +29,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`kl hello [FILE]`](#kl-hello-file)
+* [`kl generate [BOT NAME]`](#kl-generate-bot-name)
 * [`kl help [COMMAND]`](#kl-help-command)
 
-## `kl hello [FILE]`
+## `kl generate [BOT NAME]`
 
-describe the command here
+Initialize klara for use in this project
 
 ```
 USAGE
-  $ kl hello [FILE]
+  $ kl generate [BOT NAME]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -d, --dir=dir  directory to put the bot in
+  -f, --force    forces the creation on a folder that already exists
+  -h, --help     show CLI help
 
 EXAMPLE
-  $ kl hello
+  $ kl generate
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/cfanoulis/klara/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/generate.ts](https://github.com/cfanoulis/kleo/blob/v0.0.1/src/commands/generate.ts)_
 
 ## `kl help [COMMAND]`
 

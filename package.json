@@ -1,24 +1,32 @@
 {
-  "name": "klasa-cli",
+  "name": "kleo",
   "description": "Manage your klasa bot with ease!",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
   "maintainers": [
     "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
     "Nejc Drobnič (https://github.com/QuantumlyTangled)"
   ],
+  "repository": "cfanoulis/kleo",
+  "homepage": "https://github.com/cfanoulis/kleo",
+  "bugs": "https://github.com/cfanoulis/kleo/issues",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
   "bin": {
     "kl": "./bin/run"
   },
-  "bugs": "https://github.com/cfanoulis/klasa-cli/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "ansi-colors": "^4.1.1",
+    "enquirer": "^2.3.5",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@jest/globals": "^26.0.1",
     "@oclif/dev-cli": "^1",
+    "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
     "@typescript-eslint/eslint-plugin": "^3.0.1",
     "@typescript-eslint/parser": "^3.0.1",
@@ -26,7 +34,10 @@
     "eslint-config-xo": "^0.29.1",
     "eslint-config-xo-typescript": "^0.29.0",
     "globby": "^11.0.0",
+    "jest": "^26.0.1",
+    "jest-circus": "^26.0.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.0.0",
     "ts-node": "^8",
     "typescript": "^3.9.3"
   },
@@ -39,7 +50,6 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/cfanoulis/klasa-cli",
   "keywords": [
     "oclif",
     "klasa",
@@ -49,8 +59,6 @@
     "cli",
     "bot-framework"
   ],
-  "license": "Apache-2.0",
-  "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
     "bin": "kl",
@@ -58,7 +66,6 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "cfanoulis/klasa-cli",
   "scripts": {
     "lint": "eslint src --ext ts --fix",
     "build": "tsc",
