@@ -9,7 +9,7 @@
           "esnext"
       ],
       "module": "commonjs",
-      "outDir": "./lib",
+      "outDir": "./dist",
       "pretty": false,
       "removeComments": true,
       "strict": true,
