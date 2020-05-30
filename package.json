@@ -13,19 +13,16 @@
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "bin": {
-    "kl": "./bin/run"
+    "kl": "./dist/index",
+    "kleo": "./dist/index"
   },
   "dependencies": {
-    "@oclif/command": "^1",
-    "@oclif/config": "^1",
-    "@oclif/plugin-help": "^3",
-    "ansi-colors": "^4.1.1",
     "enquirer": "^2.3.5",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@jest/globals": "^26.0.1",
-    "@oclif/dev-cli": "^1",
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
@@ -41,7 +38,6 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.8",
     "ts-jest": "^26.0.0",
-    "ts-node": "^8",
     "typescript": "^3.9.3"
   },
   "engines": {
@@ -49,12 +45,9 @@
   },
   "files": [
     "/bin",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/dist"
   ],
   "keywords": [
-    "oclif",
     "klasa",
     "discord",
     "discord-bot",
@@ -62,23 +55,13 @@
     "cli",
     "bot-framework"
   ],
-  "oclif": {
-    "commands": "./dist/commands",
-    "bin": "kl",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
-  },
   "scripts": {
     "lint": "eslint src --ext ts --fix",
     "build": "tsc",
     "build:clean": "rimraf dist && tsc",
     "test": "KLEO_NO_COLOR=1 jest",
     "test:coverage": "yarn test --coverage",
-    "postpack": "rimraf oclif.manifest.json",
     "posttest": "yarn lint",
-    "prepack": "rimraf lib && yarn build && oclif-dev manifest && oclif-dev readme",
-    "version": "oclif-dev readme && git add README.md",
     "semantic-release": "semantic-release"
   },
   "resolutions": {
