@@ -1,7 +1,7 @@
 {
   "name": "kleo",
   "description": "Manage your klasa bot with ease!",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "author": "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
   "maintainers": [
     "Charalampos Fanoulis <charalampos.fanoulis@gmail.com> (https://github.com/cfanoulis)",
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/cfanoulis/kleo",
   "bugs": "https://github.com/cfanoulis/kleo/issues",
   "license": "Apache-2.0",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "bin": {
     "kl": "./bin/run"
   },
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@jest/globals": "^26.0.1",
     "@oclif/dev-cli": "^1",
+    "@semantic-release/git": "^9.0.0",
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
     "@typescript-eslint/eslint-plugin": "^3.0.1",
@@ -36,7 +37,9 @@
     "globby": "^11.0.0",
     "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
+    "mock-fs": "^4.12.0",
     "rimraf": "^3.0.2",
+    "semantic-release": "^17.0.8",
     "ts-jest": "^26.0.0",
     "ts-node": "^8",
     "typescript": "^3.9.3"
@@ -46,7 +49,7 @@
   },
   "files": [
     "/bin",
-    "/lib",
+    "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
@@ -60,7 +63,7 @@
     "bot-framework"
   ],
   "oclif": {
-    "commands": "./lib/commands",
+    "commands": "./dist/commands",
     "bin": "kl",
     "plugins": [
       "@oclif/plugin-help"
@@ -69,9 +72,17 @@
   "scripts": {
     "lint": "eslint src --ext ts --fix",
     "build": "tsc",
+    "build:clean": "rimraf dist && tsc",
+    "test": "KLEO_NO_COLOR=1 jest",
+    "test:coverage": "yarn test --coverage",
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "rimraf lib && yarn build && oclif-dev manifest && oclif-dev readme",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "semantic-release": "semantic-release"
+  },
+  "resolutions": {
+    "jest-environment-jsdom": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.0.2.tgz",
+    "jest-jasmine2": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.0.2.tgz"
   }
 }

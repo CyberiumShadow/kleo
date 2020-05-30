@@ -25,6 +25,10 @@ hello world from ./src/hello.ts!
 	};
 
 	async run() {
+		if (process.env.NO_COLORS || process.env.NO_COLOURS || process.env.KLEO_NO_COLOR) {
+			c.enabled = false;
+		}
+
 		const {flags} = this.parse<InitFlags, Record<string, unknown>>();
 
 		const {lang} = typeof flags.lang === 'undefined' ? await prompt({
