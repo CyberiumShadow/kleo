@@ -2,5 +2,8 @@
   "extends": [
     "xo",
     "xo-typescript"
-  ]
+  ],
+  "rules": {
+    "object-curly-spacing": "off"
+  }
 }
