@@ -34,7 +34,7 @@ USAGE
 
 ## `kl generate [BOT NAME]`
 
-Initialize klara for use in this project
+Initialize kleo for use in this project
 
 ```
 USAGE

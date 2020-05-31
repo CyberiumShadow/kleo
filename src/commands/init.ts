@@ -3,7 +3,7 @@ import { prompt } from 'enquirer';
 import { mkdir, writeFile } from 'fs/promises';
 import c from 'ansi-colors';
 export default class Init extends Command {
-	static description = 'Initialize klara for use in this bot';
+	static description = 'Initialize kleo for use in this bot';
 
 	static examples = [
 		`$ kl init
